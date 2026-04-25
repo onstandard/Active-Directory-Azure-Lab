@@ -20,7 +20,17 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 ## Lab Walkthrough
 
 ### Part 1: Azure VM Setup
+1. A Windows Server 2022 virtual machine was provisioned on Microsoft Azure to serve as the Domain Controller for this lab.
 
+![VM Overview](images/vm-overview.png)
+
+2. A static private IP address of 10.0.4 was assigned to the network interface to ensure the Domain Controller always uses the same address on the network.
+
+![Static IP](images/static-ip.png)
+
+3. The virtual machine was accessed via Remote Desktop Protocol (RDP). Server Manager launched automatically on login confirming the server is live and ready for configuration.
+
+![RDP Connection](images/rdp-connection.png)
 ### Part 2: Installing Active Directory
 
 ### Part 3: Organizational Units and Users
