@@ -32,7 +32,17 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 
 ![RDP Connection](images/rdp-connection.png)
 ### Part 2: Installing Active Directory
+1. The Active Directory Domain Services role was added through Server Manager to enable the server to function as a Domain Controller.
 
+![AD DS Role](images/adds-role.png)
+
+2. The server was promoted to a Domain Controller and a new forest was created with the root domain name helpdesk.local.
+
+![Domain Controller Promotion](images/dc-promotion.png)
+
+3. Active Directory Users and Computers was opened from Server Manager confirming the domain helpdesk.local is installed and ready for configuration.
+
+![ADUC](images/aduc-domain.png)
 ### Part 3: Organizational Units and Users
 
 ### Part 4: Help Desk Tasks
