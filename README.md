@@ -44,7 +44,13 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 
 ![ADUC](images/aduc-domain.png)
 ### Part 3: Organizational Units and Users
+1. Organizational Units were created to mirror a real company structure, separating users by department and providing a dedicated location for disabled accounts.
 
+![Organizational Units](images/organizational-units.png)
+
+2. Test users were created across each Organizational Unit (HR, IT, Finance) to simulate a real company environment with employees across multiple departments.
+
+![New User](images/new-user.png)
 ### Part 4: Help Desk Tasks
 
 ### Part 5: Group Policy
