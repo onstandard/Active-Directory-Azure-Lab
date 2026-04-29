@@ -8,8 +8,6 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 - Windows Server 2022
 - Active Directory Domain Services (AD DS)
 - Group Policy Management
-- Microsoft Entra ID
-- Microsoft 365 Admin Center
 - PowerShell
 
 ## Environments Used
@@ -20,44 +18,44 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 ## Lab Walkthrough
 
 ### Part 1: Azure VM Setup
-1. A Windows Server 2022 virtual machine was provisioned on Microsoft Azure to serve as the Domain Controller for this lab.
+- A Windows Server 2022 virtual machine was provisioned on Microsoft Azure to serve as the Domain Controller for this lab.
 
 ![VM Overview](images/vm-overview.png)
 
-2. A static private IP address of 10.0.4 was assigned to the network interface to ensure the Domain Controller always uses the same address on the network.
+- A static private IP address of 10.0.4 was assigned to the network interface to ensure the Domain Controller always uses the same address on the network.
 
 ![Static IP](images/static-ip.png)
 
-3. The virtual machine was accessed via Remote Desktop Protocol (RDP). Server Manager launched automatically on login confirming the server is live and ready for configuration.
+- The virtual machine was accessed via Remote Desktop Protocol (RDP). Server Manager launched automatically on login confirming the server is live and ready for configuration.
 
 ![RDP Connection](images/rdp-connection.png)
 ### Part 2: Installing Active Directory
-1. The Active Directory Domain Services role was added through Server Manager to enable the server to function as a Domain Controller.
+- The Active Directory Domain Services role was added through Server Manager to enable the server to function as a Domain Controller.
 
 ![AD DS Role](images/adds-role.png)
 
-2. The server was promoted to a Domain Controller and a new forest was created with the root domain name helpdesk.local.
+- The server was promoted to a Domain Controller and a new forest was created with the root domain name helpdesk.local.
 
 ![Domain Controller Promotion](images/dc-promotion.png)
 
-3. Active Directory Users and Computers was opened from Server Manager confirming the domain helpdesk.local is installed and ready for configuration.
+- Active Directory Users and Computers was opened from Server Manager confirming the domain helpdesk.local is installed and ready for configuration.
 
 ![ADUC](images/aduc-domain.png)
 ### Part 3: Organizational Units and Users
-1. Organizational Units (HR, IT , Finance) were created to mirror a real company structure, separating users by department and providing a dedicated location for disabled accounts.
+- Organizational Units (HR, IT , Finance) were created to mirror a real company structure, separating users by department and providing a dedicated location for disabled accounts.
 
 ![Organizational Units](images/organizational-units.png)
 
-2. Test users were created across each Organizational Unit (HR, IT, Finance) to simulate a real company environment with employees across multiple departments.
+- Test users were created across each Organizational Unit (HR, IT, Finance) to simulate a real company environment with employees across multiple departments.
 
 ![New User](images/new-user.png)
 
-3. Users were added to their respective security groups to simulate real group membership management performed by help desk and IT administrators.
+- Users were added to their respective security groups to simulate real group membership management performed by help desk and IT administrators.
 
 ![Group Members](images/HR-SECURITY-GROUP.png)
 ![Group Members](images/IT-SECURITY-GROUP.png)
 
-4. Users were added to their respective security groups to simulate real group membership management performed by help desk and IT administrators.
+- Users were added to their respective security groups to simulate real group membership management performed by help desk and IT administrators.
 
 ![Group Members](images/HR-STAFF-MEMBERS.png)
 ![Group Members](images/IT-STAFF-MEMBERS.png)
