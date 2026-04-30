@@ -60,9 +60,39 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 ![Group Members](images/HR-STAFF-MEMBERS.png)
 ![Group Members](images/IT-STAFF-MEMBERS.png)
 ### Part 4: Help Desk Tasks
+   - Task 1 — Reset a Password
+   - A password reset was performed on a user account, simulating one of the most common help desk tasks. The user was required to change their password on next login.
 
+![Password Reset](images/password-reset.png)
+![Password Reset](images/confirmation-for-password-change.png)
+
+   - Task 2 — Disable a User Account
+   - A user account was disabled to simulate an employee offboarding workflow. Disabling before deleting preserves audit logs and is standard IT practice.
+
+![Disabled Account](images/disabled-account.png)
+   - Task 3 — Unlock a Locked Out Account
+   - A locked out user account was unlocked through the Account tab in Active Directory Users and Computers, simulating a common help desk request.
+
+![Unlock Account](images/unlock-account.png)
+
+   - Task 4 — Move a Disabled User to Disabled Accounts OU
+   - The disabled user was moved to the Disabled Accounts Organizational Unit to keep the directory organized and clearly separate active from inactive accounts.
+
+![Disabled Accounts OU](images/disabled-accounts-ou.png)
+   - Task 5 — Delete a User
+   - A user account was permanently deleted after being moved to the Disabled Accounts OU, following proper offboarding procedure before removal.
+
+![Delete User](images/delete-user.png) 
 ### Part 5: Group Policy
+- Open Group Policy Management
+- Group Policy Management was opened from Server Manager to begin creating and linking Group Policy Objects to Organizational Units within the domain.
 
+![Group Policy Management](images/gpo-console.png)
+
+- Create a GPO for Account Lockout Policy
+- An Account Lockout Policy was configured to lock user accounts after 5 failed login attempts, a standard security measure in enterprise environments.
+
+![Account Lockout GPO](images/gpo-lockout.png)
 ### Part 6: Entra ID
 
 ## Challenges and Takeaways
