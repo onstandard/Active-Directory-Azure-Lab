@@ -93,6 +93,29 @@ Azure-based Active Directory lab using Windows Server 2022. Covers Domain Contro
 - An Account Lockout Policy was configured to lock user accounts after 5 failed login attempts, a standard security measure in enterprise environments.
 
 ![Account Lockout GPO](images/gpo-lockout.png)
-### Part 6: Entra ID
+
+- Create a GPO to Disable Control Panel
+- A Group Policy Object was created to disable Control Panel access for standard users, preventing unauthorized system changes across the domain.
+
+![Disable Control Panel GPO](images/gpo-control-panel.png)
+
+- Link the GPOs to an OU and Apply
+- The Group Policy Objects were linked to their respective Organizational Units and domain. Changes were applied immediately using gpupdate /force from the command line.
+
+![GPO Linked](images/gpo-linked.png)
+
+![GPUpdate](images/gpupdate.png)
 
 ## Challenges and Takeaways
+  Challenges:
+
+- Setting the static IP correctly before promoting to Domain Controller
+- Getting the RDP connection working after the server restarts as a Domain Controller because the login format changes to HELPDESK\Administrator
+- Understanding the difference between disabling and deleting a user and why you should always disable first
+
+Takeaways:
+
+- Understanding how Organizational Units mirror real company department structures
+- Seeing how Group Policy lets you enforce security settings across an entire organization from one place
+- Learning that a Domain Controller needs a static IP because every machine on the network depends on it to authenticate
+- Getting comfortable with ADUC as the main tool help desk techs use daily for user account management
